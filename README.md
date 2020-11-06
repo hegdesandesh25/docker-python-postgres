@@ -6,8 +6,8 @@ Steps to run the demo:
 |steps|description|
 | --- | --- |
 |docker build .|to build the Docker file consisting of python code|
-|docker images | to check if the images is built ok|
-|docker tag image-id custom-name| pick up the image ID and tag it to ease the use|
+|docker images <br><p> <br>REPOSITORY TAG  IMAGE ID  CREATED  SIZE <br> none none 7cfd81808987  38 minutes ago  895MB <br> </p>| to check if the images is built ok|
+|docker tag image-id custom-name <br><p><br> REPOSITORY TAG IMAGE ID CREATED SIZE <br> python-nov2 latest 7cfd81808987 38 minutes ago 895MB <br> </p>| pick up the image ID and tag it to ease the use|
 | docker-compose up |To build the docker file|
-| docker network ls  | check the bridge network created by postgres (postgres_node_net) as defined in the code|
+| docker network ls <br><p><br>NETWORK ID NAME DRIVER SCOPE <br> 876d62db9a62 postgres_node_net bridge local <br> </p> | check the bridge network created by postgres (postgres_node_net) as defined in the code|
 |docker run --name=custom-name --network=postgres_node_net| run the container to see output|
