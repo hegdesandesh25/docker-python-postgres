@@ -1,7 +1,7 @@
 # docker-python-postgres
 Program to demonstrate python container connect to Postgres container
 
-Steps to run the demo:
+Execution steps to run the demo:
 
 |steps|description|
 | --- | --- |
@@ -11,3 +11,19 @@ Steps to run the demo:
 | docker-compose up |To build the docker file|
 | docker network ls <br><p><br>NETWORK ID NAME DRIVER SCOPE <br> 876d62db9a62 postgres_node_net bridge local <br> </p> | check the bridge network created by postgres (postgres_node_net) as defined in the code|
 |docker run --name=custom-name --network=postgres_node_net| run the container to see output|
+
+
+ Docker-compose file:
+ - the below env are used to set in the compose file
+    - Username
+    - Password
+    - database name
+    - port(5432)
+    - network 
+    -  host 
+ 
+ Dockerfile:
+ - Set the workdir
+ - copy the file to container 
+ - install the psycopg2 library
+ - command to execute the python script inside container
