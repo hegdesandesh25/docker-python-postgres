@@ -9,3 +9,5 @@ Steps to run the demo:
 |docker images | to check if the images is built ok|
 |docker tag image-id custom-name| pick up the image ID and tag it to ease the use|
 | docker-compose up |To build the docker file|
+| docker network ls  | check the bridge network created by postgres (postgres_node_net) as defined in the code|
+|docker run --name=custom-name --network=postgres_node_net| run the container to see output|
